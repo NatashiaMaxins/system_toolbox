@@ -9,14 +9,14 @@ for i in `cat < /tmp/disk.log`
 do
 if [ $i -ne 0 ]
        then
-echo "Some Disk might fail quickly, please check now." | mail -s 'FreeNAS Disk Alarm' sa@dongfong.com.tw
+echo "Some Disk might fail quickly, please check now." | mail -s 'FreeNAS Disk Alarm' you@example.com
 fi
 done
 for i in `cat < /tmp/firmware.log`
 do
 if [ $i !=  Online ]
        then
-mail -s 'FreeNAS Disk Fatal Error' sa@dongfong.com.tw < /tmp/RAID.txt
+mail -s 'FreeNAS Disk Fatal Error' you@example.com < /tmp/RAID.txt
 fi
 done
 echo RAID HDD Status scan finished at $(date) >> /var/log/Checkdisk.log 
